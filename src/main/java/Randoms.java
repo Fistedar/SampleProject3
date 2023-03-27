@@ -13,7 +13,7 @@ public class Randoms implements Iterable<Integer> {
 
     @Override
     public Iterator<Integer> iterator() {
-        return new Iterator<Integer>() {
+        return new Iterator<>() {
             @Override
             public boolean hasNext() {
                 return true;
@@ -21,9 +21,7 @@ public class Randoms implements Iterable<Integer> {
 
             @Override
             public Integer next() {
-                while (true) {
-                    return (random.nextInt(diff + 1) + min);
-                }
+                return (random.nextInt(diff + 1) + min);
             }
         };
     }
